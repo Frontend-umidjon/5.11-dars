@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization Portal</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .auth-container {
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #00ffff;
+        }
+
+        .input-field {
+            background: #16213e;
+            border: 1px solid #00ffff;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
+            outline: none;
+            box-shadow: inset 0px 0px 10px rgba(0, 255, 255, 0.2);
+        }
+
+        .auth-button {
+            background: #00ffff;
+            border: none;
+            border-radius: 8px;
+            color: #16213e;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .auth-button:hover {
+            background: #00d4d4;
+            box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5);
+        }
+
+        .auth-button:active {
+            background: #00baba;
+        }
+
+        .helper-text {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #aaaaaa;
+        }
+
+        .helper-text a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+
+        .helper-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Login</h1>
+        <form action="#" method="POST">
+            <input type="text" class="input-field" placeholder="Username" required>
+            <input type="password" class="input-field" placeholder="Password" required>
+            <button type="submit" class="auth-button">Login</button>
+        </form>
+        <p class="helper-text">
+            Don't have an account? <a href="#">Sign up</a>
+        </p>
+    </div>
+</body>
+</html>
