@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0d1117, #1f1f1f);
+    font-family: 'Roboto', sans-serif;
+    color: #c9d1d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.auth-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    color: #58a6ff;
+    text-shadow: 0px 0px 10px #58a6ff;
+    animation: textGlow 2s infinite alternate;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-field {
+    padding: 15px;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    background: #1c1f26;
+    color: #c9d1d9;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-field:focus {
+    border-color: #58a6ff;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+}
+
+.auth-button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #30363d, #0d1117);
+    color: #58a6ff;
+    font-size: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.8);
+    background: linear-gradient(145deg, #58a6ff, #1f1f1f);
+}
+
+.auth-button:active {
+    transform: scale(0.95);
+}
+
+.helper-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+.helper-text a {
+    color: #58a6ff;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.helper-text a:hover {
+    color: #f0f6fc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0px 0px 15px #58a6ff;
+    }
+    to {
+        text-shadow: 0px 0px 25px #58a6ff;
+    }
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
